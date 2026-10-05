@@ -1,0 +1,61 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "jadev-auth",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-10-05",
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "jadev-auth",
+			"database_id": "0417dcba-e22f-4d70-aa18-3827c68316ca",
+			"migrations_dir": "migrations",
+			"remote": true
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "RATE_LIMIT",
+			"id": "d99036e327a34fcc8f6132124ee72a2d",
+			"remote": true
+		}
+	],
+	"vars": {
+		"APP_ORIGIN": "https://auth.jadev.cl",
+		"GITHUB_REDIRECT_URI": "https://auth.jadev.cl/auth/github/callback",
+		"WEBAUTHN_RP_ID": "jadev.cl",
+		"WEBAUTHN_RP_NAME": "Jadev Auth",
+		"WEBAUTHN_ORIGIN": "https://auth.jadev.cl"
+	}
+	// "compatibility_flags": [
+	//   "nodejs_compat"
+	// ],
+	// "vars": {
+	//   "MY_VAR": "my-variable"
+	// },
+	// "kv_namespaces": [
+	//   {
+	//     "binding": "MY_KV_NAMESPACE",
+	//     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	//   }
+	// ],
+	// "r2_buckets": [
+	//   {
+	//     "binding": "MY_BUCKET",
+	//     "bucket_name": "my-bucket"
+	//   }
+	// ],
+	// "d1_databases": [
+	//   {
+	//     "binding": "MY_DB",
+	//     "database_name": "my-database",
+	//     "database_id": ""
+	//   }
+	// ],
+	// "ai": {
+	//   "binding": "AI"
+	// },
+	// "observability": {
+	//   "enabled": true,
+	//   "head_sampling_rate": 1
+	// }
+}
